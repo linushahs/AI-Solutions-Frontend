@@ -1,15 +1,18 @@
 import React from "react";
 import { GoArrowRight } from "react-icons/go";
 import Container from "./ui/container";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+  const { t } = useTranslation();
+
   return (
-    <div className="h-[calc(100vh-80px)] bg-gray-200">
+    <div className="h-[calc(100vh-80px)] bg-gray-100">
       <Container className="h-full flex gap-12 items-center justify-center">
         {/* -------------------------Left Side------------------------------  */}
         <div className="flex flex-col gap-[40px] basis-[50%]">
           <h1 className="font-bold text-5xl text-gray-800 tracking-lighter">
-            Empowering Workplaces <br />{" "}
+            {t("Welcome to React")} <br />{" "}
             <span className="relative top-2">with AI innovation</span>
           </h1>
           <p className="tracking-wide">
@@ -29,10 +32,10 @@ const Home = () => {
         </div>
 
         {/* ----------------------------Right Side-------------------------------  */}
-        <div className="basis-[50%]">
+        <div className="basis-[50%] h-[500px]">
           <img
-            className="rounded-lg"
-            src="https://in.nec.com/en_IN/solutions_services/aipf/images/ai_solutions_01.jpg"
+            className="rounded-xl size-full  object-cover"
+            src="/homepage-banner.jpg"
             alt="AI-image"
           />
         </div>

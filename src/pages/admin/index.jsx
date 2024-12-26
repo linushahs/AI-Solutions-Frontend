@@ -2,20 +2,37 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 function AdminPage() {
-  // check whether user has logged in or not
-
-  //if logged in
-  // navigate("/admin/dashboard")
-
-  // if not logged in
-  // navigate("/admin/login")
+  const [loading, setLoading] = React.useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
-    navigate("/admin/login");
+    const getSession = () => {
+      setLoading(true);
+      try {
+        const token = localStorage.getItem("token");
+
+        if (!token) {
+          navigate("/admin/login");
+        }
+      } catch (err) {
+        console.log(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    getSession();
   }, []);
 
-  return <div>AdminPage</div>;
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  return (
+    <div>
+      <h1>Admin Page</h1>
+    </div>
+  );
 }
 
 export default AdminPage;

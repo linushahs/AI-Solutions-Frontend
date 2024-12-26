@@ -28,6 +28,11 @@ export default {
           950: "#030712",
         },
       },
+
+      backgroundImage: {
+        "bg-gradient":
+          "linear-gradient(-90deg, rgba(255,255,255,1) 0%, rgba(0,54,116,0.7) 35%, rgba(108,59,188,0.75) 100%)",
+      },
     },
   },
   plugins: [],

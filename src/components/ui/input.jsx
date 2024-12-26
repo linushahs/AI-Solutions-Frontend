@@ -13,5 +13,4 @@ function Input({ type, className, ...props }) {
     />
   );
 }
-
 export default Input;

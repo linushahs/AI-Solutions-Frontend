@@ -3,13 +3,14 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import Layout from "./Layout";
 import AdminPage from "./pages/admin";
+import Login from "./pages/admin/login";
 import ContactUsPage from "./pages/ContactUs";
 import Home from "./pages/Home";
 import More from "./pages/More";
 import Portfolio from "./pages/Portfolio";
 import Solutions from "./pages/Solutions";
-import DashboardPage from "./pages/admin/dashboard";
-import Login from "./pages/admin/login";
+
+import "./i18n";
 
 const router = createBrowserRouter([
   {
@@ -41,10 +42,6 @@ const router = createBrowserRouter([
   {
     path: "/admin",
     element: <AdminPage />,
-  },
-  {
-    path: "/admin/dashboard",
-    element: <DashboardPage />,
   },
   {
     path: "/admin/login",
