@@ -1,10 +1,11 @@
-import React from "react";
+import React, { Fragment } from "react";
+import Container from "./ui/container";
 
 const Solutions = () => {
   return (
-    <div>
+    <Container>
       {/* First  */}
-      <div className="p-20 flex  gap-12 items-center justify-center">
+      <div className="py-20 flex  gap-12 items-center justify-center">
         {/* -------------------------Left Side------------------------------  */}
 
         <div className="flex flex-col gap-[40px] basis-[50%]">
@@ -41,7 +42,7 @@ const Solutions = () => {
       </div>
 
       {/* Second  */}
-      <div className="p-20 flex gap-12 items-center justify-center">
+      <div className="py-20 flex gap-12 items-center justify-center">
         {/* -------------------------Left Side------------------------------  */}
         <div className="basis-[50%]">
           <img
@@ -75,7 +76,7 @@ const Solutions = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

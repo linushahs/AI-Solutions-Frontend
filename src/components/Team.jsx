@@ -2,11 +2,11 @@ import React from "react";
 
 const Team = () => {
   return (
-    <div className="mt-20 bg-gray-200 h-[100vh] p-16">
+    <div className="mt-20 bg-gray-200 p-16">
       <div className="flex flex-col gap-14">
         {/* head title  */}
         <div className="text-center">
-          <h2 className="uppercase text-blue font-bold text-black tracking-wide">
+          <h2 className="uppercase text-blue font-bold  tracking-wide">
             THE TEAM
           </h2>
           <h1 className="uppercase font-bold text-3xl">Meet Our Team</h1>

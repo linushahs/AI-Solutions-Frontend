@@ -2,10 +2,10 @@ import React from "react";
 
 const Questions = () => {
   return (
-    <div className="bg-gray-200 h-[100vh] p-16">
+    <div className="bg-white p-16">
       {/* head title  */}
       <div className="text-center">
-        <h2 className="uppercase text-blue font-bold text-black tracking-wide">
+        <h2 className="uppercase text-blue font-bold tracking-wide">
           TOP FAQS
         </h2>
         <h1 className="uppercase font-bold text-3xl">

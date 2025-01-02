@@ -1,12 +1,8 @@
 import React from "react";
-import { CiShoppingBasket } from "react-icons/ci";
-import { GiGymBag } from "react-icons/gi";
-import { TbActivityHeartbeat } from "react-icons/tb";
-import { BsTruckFront } from "react-icons/bs";
 
 const Tools = () => {
   return (
-    <div className="my-[50px] flex flex-col gap-14">
+    <section id="tools" className="py-[50px] flex flex-col gap-14">
       {/*--------------- Head of tools ------------ */}
       <div className="text-center">
         <h2 className="uppercase font-semibold text-black tracking-wide">
@@ -50,12 +46,7 @@ const Tools = () => {
           </p>
         </div>
       </div>
-
-      {/*------------------------ button --------------------------- */}
-      <button className="border-[2px] font-semibold self-center border-blue bg-blue text-white px-5 py-[6px]">
-        Primary Action
-      </button>
-    </div>
+    </section>
   );
 };
 

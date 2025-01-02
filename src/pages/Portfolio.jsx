@@ -4,6 +4,7 @@ import Testimonials from "../components/Testimonials";
 import Breadcrumb from "../components/Breadcrumb";
 
 import React, { Fragment } from "react";
+import Container from "../components/ui/container";
 
 const Portfolio = () => {
   const paths = [
@@ -13,7 +14,9 @@ const Portfolio = () => {
 
   return (
     <Fragment>
-      <Breadcrumb items={paths} />
+      <Container>
+        <Breadcrumb items={paths} />
+      </Container>
       <OurPortfolio />
       <Testimonials />
       <Questions />

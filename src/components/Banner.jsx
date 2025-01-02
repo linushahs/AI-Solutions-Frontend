@@ -2,9 +2,9 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="bg-gray-200 py-16">
+    <div className="bg-gray-100 py-16">
       <div className="flex flex-col gap-12">
-        <h1 className="self-center font-bold text-4xl">
+        <h1 className="self-center font-bold text-4xl leading-[40%]">
           Trusted by Industry Leaders
         </h1>
         <p className="self-center text-lg">

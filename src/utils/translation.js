@@ -1,12 +1,12 @@
 const resources = {
   en: {
     translation: {
-      "Welcome to React": "Welcome to React and react-i18next",
+      "Welcome to React": "Empowering Services with AI Innovation",
     },
   },
   np: {
     translation: {
-      "Welcome to React": " रियाक्ट र रियाक्ट-आइ18नेक्सटमा स्वागत छ",
+      "Welcome to React": "एआई इनोभेसनको साथ सशक्तिकरण सेवाहरू",
     },
   },
 };

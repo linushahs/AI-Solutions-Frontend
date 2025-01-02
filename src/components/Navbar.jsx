@@ -1,11 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { IoGlobeOutline } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
+import { IoGlobeOutline } from "react-icons/io5";
+import { Link, useLocation } from "react-router-dom";
+import { twMerge } from "tailwind-merge";
 
 const Navbar = () => {
   const [selectedLanguage, setSelectedLanguage] = React.useState("en");
   const { i18n } = useTranslation();
+
+  const { pathname } = useLocation();
 
   const handleLanguageChange = (e) => {
     setSelectedLanguage(e.target.value);
@@ -16,13 +19,18 @@ const Navbar = () => {
     <div className="h-[70px]  border-b border-gray-200 pl-20 pr-20 flex items-center justify-between">
       {/* Logo & Title  */}
       <Link to="/" className="flex items-center gap-3">
-        <img src="/footer/cross.png" alt="" />
-        <h2 className=" font-medium text-gray-500 text-2xl">AI Solutions</h2>
+        <img src="/logo.png" alt="logo" className="w-[160px]" />
       </Link>
       {/* Navigations Links  */}
       <div className="flex gap-7 font-sans font-medium text-gray-700">
         {menuItems.map((item) => (
-          <Link to={item.href}>{item.label}</Link>
+          <Link
+            key={item.label}
+            to={item.href}
+            className={twMerge(pathname === item.href && "text-blue")}
+          >
+            {item.label}
+          </Link>
         ))}
       </div>
       {/* Login Signup  */}
@@ -42,7 +50,9 @@ const Navbar = () => {
 
         <Link
           to="/contactus"
-          className="border-[2px] rounded-md font-semibold border-blue text-blue px-5 py-[6px]"
+          className={
+            "border-[2px] rounded-md font-semibold border-blue text-blue px-5 py-[6px]"
+          }
         >
           Contact Us
         </Link>
@@ -51,7 +61,7 @@ const Navbar = () => {
   );
 };
 
-const menuItems = [
+export const menuItems = [
   {
     label: "Home",
     href: "/",

@@ -40,8 +40,8 @@ const Login = () => {
       <Toaster position="bottom-right" />
 
       <img
-        src="/login/login.png"
-        className="h-[500px] w-[40%] xl:w-[30%] rounded-xl object-cover"
+        src="/login-banner.png"
+        className="h-[500px] w-[40%] xl:w-[30%] rounded-xl bg-gray-100 object-cover"
         alt="login page"
       />
       <form onSubmit={handleLogin} className="flex flex-col gap-10">

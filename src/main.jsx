@@ -5,10 +5,11 @@ import Layout from "./Layout";
 import AdminPage from "./pages/admin";
 import Login from "./pages/admin/login";
 import ContactUsPage from "./pages/ContactUs";
-import Home from "./pages/Home";
-import More from "./pages/More";
 import Portfolio from "./pages/Portfolio";
 import Solutions from "./pages/Solutions";
+import BlogsPage from "./pages/blogs";
+import BlogDescription from "./pages/blogs/blog-description";
+import Homepage from "./pages/Home";
 
 import "./i18n";
 
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "",
-        element: <Home />,
+        element: <Homepage />,
       },
       {
         path: "portfolio",
@@ -34,8 +35,12 @@ const router = createBrowserRouter([
         element: <ContactUsPage />,
       },
       {
-        path: "more",
-        element: <More />,
+        path: "blogs",
+        element: <BlogsPage />,
+      },
+      {
+        path: "blogs/:slug",
+        element: <BlogDescription />,
       },
     ],
   },
@@ -48,6 +53,7 @@ const router = createBrowserRouter([
     element: <Login />,
   },
 ]);
+
 createRoot(document.getElementById("root")).render(
   <RouterProvider router={router} />
 );

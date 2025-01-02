@@ -9,7 +9,7 @@ import Tools from "../components/Tools";
 
 import React, { Fragment } from "react";
 
-const Home = () => {
+const Homepage = () => {
   return (
     <Fragment>
       <HomeComponent />
@@ -17,11 +17,11 @@ const Home = () => {
       <Banner />
       <Caption />
       <Testimonials />
-      <Blog />
+      <Blog showAllBlogs={true} />
       <Team />
       <Questions />
     </Fragment>
   );
 };
 
-export default Home;
+export default Homepage;

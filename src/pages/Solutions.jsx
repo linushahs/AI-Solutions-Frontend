@@ -1,8 +1,8 @@
 import Breadcrumb from "../components/Breadcrumb";
-import Solution from "../components/Solutions";
 import Questions from "../components/Questions";
-
+import Solution from "../components/Solutions";
 import React, { Fragment } from "react";
+import Container from "../components/ui/container";
 
 const Solutions = () => {
   const paths = [
@@ -12,7 +12,10 @@ const Solutions = () => {
 
   return (
     <Fragment>
-      <Breadcrumb items={paths} />
+      <Container>
+        <Breadcrumb items={paths} />
+      </Container>
+
       <Solution />
       <Questions />
     </Fragment>
