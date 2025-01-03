@@ -1,27 +1,6 @@
 import { Link } from "react-router-dom";
-import Portfolio from "../pages/Portfolio";
-import Solutions from "../pages/Solutions";
-import ContactUs from "./ContactUs";
 
-const Breadcrumb = ({
-  items = [
-    {
-      label: "Portfolio",
-      href: <Portfolio />,
-    },
-    {
-      label: "Solutions",
-      href: <Solutions />,
-    },
-    {
-      label: "Contact Us",
-      href: <ContactUs />,
-    },
-    {
-      label: "More",
-    },
-  ],
-}) => {
+const Breadcrumb = ({ items }) => {
   return (
     <nav aria-label="Breadcrumb" className="pt-5">
       <ol className="flex items-center space-x-2">

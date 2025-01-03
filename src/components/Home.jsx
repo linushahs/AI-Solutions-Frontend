@@ -12,18 +12,15 @@ const Home = () => {
         {/* -------------------------Left Side------------------------------  */}
         <div className="flex flex-col gap-5 basis-[50%]">
           <h1 className="font-bold text-5xl text-gray-800 tracking-normal leading-[120%] w-[80%] ">
-            {t("Welcome to React")}
+            {t("title1")}
           </h1>
-          <p className="tracking-wide w-3/4">
-            Enhancing digital employee experiences with AI-driven solutions that
-            transform industries and drive success.
-          </p>
+          <p className="tracking-wide w-3/4">{t("description1")}</p>
 
           {/* buttons  */}
           <div className="flex gap-3 mt-6">
             <a href="#tools">
               <button className="flex items-center gap-4 justify-center border-[2px] font-semibold bg-blue border-blue px-6 py-[7px] text-white rounded">
-                Get Started <GoArrowRight />
+                {t("get-started")} <GoArrowRight />
               </button>
             </a>
           </div>

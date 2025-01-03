@@ -1,11 +1,11 @@
-import Banner from "../components/Banner";
-import Blog from "../components/Blog";
-import Caption from "../components/Caption";
-import HomeComponent from "../components/Home";
-import Questions from "../components/Questions";
-import Team from "../components/Team";
-import Testimonials from "../components/Testimonials";
-import Tools from "../components/Tools";
+import Banner from "../components/banner";
+import Blog from "../components/blog";
+import Caption from "../components/caption";
+import HomeComponent from "../components/home";
+import FAQs from "../components/faqs";
+import Team from "../components/team";
+import Testimonials from "../components/testimonials";
+import Tools from "../components/tools";
 
 import React, { Fragment } from "react";
 
@@ -19,7 +19,7 @@ const Homepage = () => {
       <Testimonials />
       <Blog showAllBlogs={true} />
       <Team />
-      <Questions />
+      <FAQs />
     </Fragment>
   );
 };

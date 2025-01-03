@@ -1,16 +1,16 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Banner = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="bg-gray-100 py-16">
       <div className="flex flex-col gap-12">
         <h1 className="self-center font-bold text-4xl leading-[40%]">
-          Trusted by Industry Leaders
+          {t("banner-title")}
         </h1>
-        <p className="self-center text-lg">
-          Discover how our AI solutions empower business across diverse sectors
-          to achieve their goals.
-        </p>
+        <p className="self-center text-lg">{t("banner-description")}</p>
         <div className="flex justify-between px-28 items-center">
           <div className="flex gap-2 items-center">
             <img src="/banner/shells.png" alt="" />

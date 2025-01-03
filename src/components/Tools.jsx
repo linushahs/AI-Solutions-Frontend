@@ -1,14 +1,17 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Tools = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="tools" className="py-[50px] flex flex-col gap-14">
       {/*--------------- Head of tools ------------ */}
       <div className="text-center">
-        <h2 className="uppercase font-semibold text-black tracking-wide">
-          The tools you need
+        <h2 className="uppercase font-semibold text-blue tracking-wide mb-2">
+          {t("tools-subtitle")}
         </h2>
-        <h1 className="uppercase font-bold text-3xl">What we offer</h1>
+        <h1 className="uppercase font-bold text-3xl">{t('tools-title')}</h1>
       </div>
 
       {/*--------------------- Icons and tools ------------------------- */}

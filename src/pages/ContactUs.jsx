@@ -1,5 +1,5 @@
-import Breadcrumb from "../components/Breadcrumb";
-import ContactUs from "../components/ContactUs";
+import Breadcrumb from "../components/breadcrumb";
+import ContactUs from "../components/contact-us";
 import React from "react";
 import Container from "../components/ui/container";
 

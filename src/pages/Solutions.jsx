@@ -1,6 +1,6 @@
-import Breadcrumb from "../components/Breadcrumb";
-import Questions from "../components/Questions";
-import Solution from "../components/Solutions";
+import Breadcrumb from "../components/breadcrumb";
+import Questions from "../components/faqs";
+import Solution from "../components/solutions";
 import React, { Fragment } from "react";
 import Container from "../components/ui/container";
 
@@ -17,7 +17,7 @@ const Solutions = () => {
       </Container>
 
       <Solution />
-      <Questions />
+      <Questions className={"bg-gray-100"}/>
     </Fragment>
   );
 };

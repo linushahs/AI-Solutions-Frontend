@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
-import Blog from "../components/Blog";
-import Breadcrumb from "../components/Breadcrumb";
+import Blog from "../components/blog";
+import Breadcrumb from "../components/breadcrumb";
 import Container from "../components/ui/container";
 
 const BlogsPage = () => {

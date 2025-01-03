@@ -1,9 +1,34 @@
 import React from "react";
-import { menuItems } from "./Navbar";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import Container from "./ui/container";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
+  const menuItems = [
+    {
+      label: t("Home"),
+      href: "/",
+    },
+    {
+      label: t("Portfolio"),
+      href: "/portfolio",
+    },
+    {
+      label: t("Solutions"),
+      href: "/solutions",
+    },
+    {
+      label: t("Contact Us"),
+      href: "/contactus",
+    },
+    {
+      label: t("Blogs"),
+      href: "/blogs",
+    },
+  ];
+
   return (
     <div className="bg-gray-700 h-full py-10">
       <Container>
@@ -32,7 +57,7 @@ const Footer = () => {
               <div>
                 <h4 className="font-semibold text-lg">Menus</h4>
               </div>
-              <ul className="flex flex-col gap-2">
+              <ul className="flex flex-col gap-2.5">
                 {menuItems.map((item) => (
                   <li key={item.label} className="hover:underline">
                     <Link to={item.href}>{item.label}</Link>
@@ -46,7 +71,7 @@ const Footer = () => {
               <div>
                 <h4 className="font-semibold text-lg">Useful Links</h4>
               </div>
-              <ul className="flex flex-col gap-2">
+              <ul className="flex flex-col gap-2.5">
                 {[
                   { label: "Sitemap", href: "" },
                   { label: "Cookie Policy", href: "" },

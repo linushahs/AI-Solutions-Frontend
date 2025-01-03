@@ -6,7 +6,7 @@ import { twMerge } from "tailwind-merge";
 
 const Navbar = () => {
   const [selectedLanguage, setSelectedLanguage] = React.useState("en");
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
 
   const { pathname } = useLocation();
 
@@ -14,6 +14,29 @@ const Navbar = () => {
     setSelectedLanguage(e.target.value);
     i18n.changeLanguage(e.target.value);
   };
+
+  const menuItems = [
+    {
+      label: t("Home"),
+      href: "/",
+    },
+    {
+      label: t("Portfolio"),
+      href: "/portfolio",
+    },
+    {
+      label: t("Solutions"),
+      href: "/solutions",
+    },
+    {
+      label: t("Blogs"),
+      href: "/blogs",
+    },
+    {
+      label: t("Contact Us"),
+      href: "/contactus",
+    },
+  ];
 
   return (
     <div className="h-[70px]  border-b border-gray-200 pl-20 pr-20 flex items-center justify-between">
@@ -54,34 +77,11 @@ const Navbar = () => {
             "border-[2px] rounded-md font-semibold border-blue text-blue px-5 py-[6px]"
           }
         >
-          Contact Us
+          {t("Contact Us")}
         </Link>
       </div>
     </div>
   );
 };
-
-export const menuItems = [
-  {
-    label: "Home",
-    href: "/",
-  },
-  {
-    label: "Portfolio",
-    href: "/portfolio",
-  },
-  {
-    label: "Solutions",
-    href: "/solutions",
-  },
-  {
-    label: "Contact Us",
-    href: "/contactus",
-  },
-  {
-    label: "Blogs",
-    href: "/blogs",
-  },
-];
 
 export default Navbar;

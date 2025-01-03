@@ -15,8 +15,20 @@ function Chatbot() {
   const flow = {
     start: {
       message: "Hello! How can we help you?",
-      chatDisabled: true,
-      options: ["I have a question", "I need support"],
+      path: "services",
+    },
+    services: {
+      message:
+        "We provide services in the following areas:" +
+        " Web Development, " +
+        "Mobile Development, " +
+        "AI Solutions, " +
+        "Other",
+      path: "further",
+      transition: { duration: 1000 },
+    },
+    further: {
+      message: "What do you want to know further?",
       path: "askBusinessType",
     },
     askBusinessType: {

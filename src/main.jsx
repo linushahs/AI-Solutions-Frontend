@@ -7,7 +7,7 @@ import Login from "./pages/admin/login";
 import ContactUsPage from "./pages/ContactUs";
 import Portfolio from "./pages/Portfolio";
 import Solutions from "./pages/Solutions";
-import BlogsPage from "./pages/blogs";
+import BlogsPage from "./pages/Blogs";
 import BlogDescription from "./pages/blogs/blog-description";
 import Homepage from "./pages/Home";
 

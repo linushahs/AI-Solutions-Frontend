@@ -1,7 +1,7 @@
-import OurPortfolio from "../components/OurPortfolio";
-import Questions from "../components/Questions";
-import Testimonials from "../components/Testimonials";
-import Breadcrumb from "../components/Breadcrumb";
+import OurPortfolio from "../components/our-portfolio";
+import FAQs from "../components/faqs";
+import Testimonials from "../components/testimonials";
+import Breadcrumb from "../components/breadcrumb";
 
 import React, { Fragment } from "react";
 import Container from "../components/ui/container";
@@ -19,7 +19,7 @@ const Portfolio = () => {
       </Container>
       <OurPortfolio />
       <Testimonials />
-      <Questions />
+      <FAQs />
     </Fragment>
   );
 };

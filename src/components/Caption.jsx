@@ -1,14 +1,19 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Caption = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="pt-14 pb-20 flex justify-center">
       <div className="w-3/4 flex flex-col justify-center items-center gap-16">
         <div className="text-center">
-          <h2 className="uppercase font-semibold text-blue tracking-wide">
-            SERVICES
+          <h2 className="uppercase font-semibold text-blue tracking-wide mb-2">
+            {t("services-subtitle")}
           </h2>
-          <h1 className="uppercase font-bold text-3xl">What we provide</h1>
+          <h1 className="uppercase font-bold text-3xl">
+            {t("services-title")}
+          </h1>
         </div>
         <div className="grid grid-cols-2 gap-x-10 gap-y-16 place-items-center">
           {services.map((service, index) => (
